@@ -1,0 +1,81 @@
+[
+    {
+      "id": 1,
+      "thumbnail": "https://i.ibb.co/0FfPbSv/tech-gadget-box.jpg",
+      "name": "Tech Gadget Box",
+      "techCategory": "Gadgets",
+      "price": "$29.99",
+      "frequency": "Monthly",
+      "description": "Get the latest trending tech gadgets delivered monthly to your door.",
+      "features": ["3-5 curated gadgets", "How-to guide included", "Early access to new tech"],
+      "ratings": 4.5,
+      "reviews": 120,
+      "buttonText": "View More"
+    },
+    {
+      "id": 2,
+      "thumbnail": "https://i.ibb.co/jVZBjKH/smart-home-box.jpg",
+      "name": "Smart Home Essentials",
+      "techCategory": "Smart Home",
+      "price": "$39.99",
+      "frequency": "Monthly",
+      "description": "Automate your home with smart lights, plugs, and devices.",
+      "features": ["Smart lighting", "Voice control gear", "Mobile app integration"],
+      "ratings": 4.7,
+      "reviews": 89,
+      "buttonText": "View More"
+    },
+    {
+      "id": 3,
+      "thumbnail": "https://i.ibb.co/DY0n1C5/dev-tools-box.jpg",
+      "name": "Developer Toolkit",
+      "techCategory": "Software Tools",
+      "price": "$24.99",
+      "frequency": "Monthly",
+      "description": "Essential tools, cheatsheets, and gadgets for software developers.",
+      "features": ["Dev-themed gadgets", "Stickers & swags", "Productivity boosters"],
+      "ratings": 4.2,
+      "reviews": 45,
+      "buttonText": "View More"
+    },
+    {
+      "id": 4,
+      "thumbnail": "https://i.ibb.co/3kCjKxS/gaming-box.jpg",
+      "name": "Gaming Loot Crate",
+      "techCategory": "Gaming",
+      "price": "$34.99",
+      "frequency": "Bi-Monthly",
+      "description": "Exclusive gaming merch, collectibles, and digital goodies.",
+      "features": ["Game-themed items", "Shirts, figures, and codes", "Fan favorite picks"],
+      "ratings": 4.8,
+      "reviews": 230,
+      "buttonText": "View More"
+    },
+    {
+      "id": 5,
+      "thumbnail": "https://i.ibb.co/MhHdG74/mobile-accessories.jpg",
+      "name": "Mobile Accessories Pack",
+      "techCategory": "Mobile",
+      "price": "$19.99",
+      "frequency": "Monthly",
+      "description": "Must-have mobile gear: cables, grips, cases, and more.",
+      "features": ["Premium accessories", "Cross-brand support", "Trendy designs"],
+      "ratings": 4.1,
+      "reviews": 60,
+      "buttonText": "View More"
+    },
+    {
+      "id": 6,
+      "thumbnail": "https://i.ibb.co/4MnGHDj/vr-starter-box.jpg",
+      "name": "VR Starter Pack",
+      "techCategory": "Virtual Reality",
+      "price": "$49.99",
+      "frequency": "Quarterly",
+      "description": "Dive into the world of VR with curated content and gear.",
+      "features": ["Intro VR games", "Comfort accessories", "Setup guides"],
+      "ratings": 4.6,
+      "reviews": 75,
+      "buttonText": "View More"
+    }
+  ]
+  
