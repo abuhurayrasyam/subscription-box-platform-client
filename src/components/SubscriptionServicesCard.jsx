@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router";
 
 const SubscriptionServicesCard = ({ subscriptionData }) => {
-  const { thumbnail, name, techCategory, price, frequency } = subscriptionData;
+  const { id, thumbnail, name, techCategory, price, frequency } = subscriptionData;
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 w-sm transition-transform hover:scale-[1.02] duration-200">
+    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 w-90 transition-transform hover:scale-[1.02] duration-200">
       <img src={thumbnail}  alt={name} className="w-full h-48 object-cover rounded-t-2xl"
       />
       <div className="p-5">
@@ -15,12 +16,12 @@ const SubscriptionServicesCard = ({ subscriptionData }) => {
         <p className="text-sm text-gray-700 mt-1">
           Price: <span className="font-semibold text-green-600">{price}</span>
         </p>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-gray-500 mb-4">
           Frequency: <span className="font-medium">{frequency}</span>
         </p>
-        <button className="mt-4 w-full bg-base-200 hover:bg-base-300 text-black border border-gray-300 py-2 rounded-md transition cursor-pointer">
+        <Link to={`/subscription-details/${id}`} className="w-full bg-base-300 hover:bg-gray-400 text-black hover:text-white border border-gray-300 py-2 px-3 rounded-md cursor-pointer">
           View More
-        </button>
+        </Link>
       </div>
     </div>
   );

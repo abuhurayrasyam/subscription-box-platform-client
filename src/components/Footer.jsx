@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="bg-base-100 shadow-2xl text-base-content">
+    <footer className="bg-base-100 border border-gray-200 shadow-xl text-base-content">
         <div className="footer sm:footer-horizontal w-11/12 mx-auto p-5 lg:justify-around">
             <nav>
                 <h6 className="footer-title">Legal</h6>
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
             </nav>
         </div>
-        <div className="bg-base-300 py-3">
+        <div className="bg-base-300 py-4">
             <p className="text-center w-11/12 mx-auto text-sm">Copyright © {new Date().getFullYear()} - All right reserved by Subscription Box Platform</p>
         </div>
     </footer>
