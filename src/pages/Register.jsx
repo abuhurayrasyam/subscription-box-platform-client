@@ -6,7 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, updateUser} = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -17,7 +17,6 @@ const Register = () => {
         const photoUrl = e.target.photoUrl.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name, photoUrl);
 
         if (!/[a-z]/.test(password)) {
             toast.error('Must include at least one lowercase letter.');
@@ -42,9 +41,15 @@ const Register = () => {
           
         createUser(email, password)
             .then(() => {
-                toast.success("Account created successfully!");
-                navigate("/");
-            })
+                updateUser({ displayName: name, photoURL: photoUrl })
+                    .then(() => {
+                        toast.success("Account created successfully!");
+                        navigate("/");
+                    })
+                    .catch((error) => {
+                        alert(error);
+                    });
+             })
             .catch((error) => {
                 const errorCode = error.code;
 

@@ -64,13 +64,14 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end space-x-2 items-center">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+            {
+              user && 
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar" title={user.displayName}>
                 <div className="w-10 rounded-full">
-                    <img
-                    alt="Tailwind CSS Navbar component"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <img alt={user.displayName} src={user.photoURL} />
                 </div>
-            </div>
+              </div>
+            }
             {
               user ? (
                 <button onClick={handleLogout} className="btn">Logout</button>
