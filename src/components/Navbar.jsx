@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 const Navbar = () => {
 
@@ -14,8 +14,8 @@ const Navbar = () => {
       .then(() => {
         toast.success("Logout Successful")
       })
-      .catch((error) => {
-        console.log(error)
+      .catch(() => {
+        toast.error("Logout Unsuccessful")
       });
   }
 
@@ -28,6 +28,9 @@ const Navbar = () => {
 
   return (
     <div className="bg-base-100 shadow-sm">
+
+      <ToastContainer></ToastContainer>
+
       <div className="navbar w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">

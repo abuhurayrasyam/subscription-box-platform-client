@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 
 const Register = () => {
 
     const {createUser} = useContext(AuthContext);
+
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -40,14 +42,11 @@ const Register = () => {
           
         createUser(email, password)
             .then(() => {
-                // const user = userCredential.user;
-                // console.log(user);
                 toast.success("Account created successfully!");
+                navigate("/");
             })
             .catch((error) => {
                 const errorCode = error.code;
-                // const errorMessage = error.message;
-                // console.log(errorMessage);
 
                 let message = "Something went wrong. Please try again.";
 

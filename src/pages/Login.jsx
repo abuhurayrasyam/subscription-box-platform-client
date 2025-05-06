@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 
 const Login = () => {
 
     const {loginUser} = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -16,15 +19,12 @@ const Login = () => {
         
         loginUser(email, password)
             .then(() => {
-                // const user = userCredential.user;
-                // console.log(user);
                 toast.success("Logged in successfully!");
+                navigate(`${location.state ? location.state : "/"}`)
             })
             .catch((error) => {
                 const errorCode = error.code;
-                // const errorMessage = error.message;
-                // console.log(errorMessage);
-
+                
                 if (errorCode === "auth/invalid-credential") {
                     toast.error("Incorrect email or password. Please try again.");
                 }
