@@ -1,18 +1,77 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router';
+import { AuthContext } from '../provider/AuthProvider';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Register = () => {
+
+    const {createUser} = useContext(AuthContext);
+
+    const handleRegister = (e) => {
+        e.preventDefault();
+
+        const name = e.target.name.value;
+        const photoUrl = e.target.photoUrl.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(name, photoUrl);
+
+        if (!/[a-z]/.test(password)) {
+            toast.error('Must include at least one lowercase letter.');
+            return;
+          }
+        if (!/[A-Z]/.test(password)) {
+            toast.error('Must include at least one uppercase letter.');
+            return;
+        }
+        if (!/\d/.test(password)) {
+            toast.error('Must include at least one number.');
+            return;
+        }
+        if (!/[!@#$%&*?]/.test(password)) {
+            toast.error('Must include at least one special character (!@#$%&*?).');
+            return;
+        }
+        if (password.length < 8) {
+            toast.error('Must be at least 8 characters long.');
+            return;
+        }
+          
+        createUser(email, password)
+            .then(() => {
+                // const user = userCredential.user;
+                // console.log(user);
+                toast.success("Account created successfully!");
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                // const errorMessage = error.message;
+                // console.log(errorMessage);
+
+                let message = "Something went wrong. Please try again.";
+
+                if (errorCode === "auth/email-already-in-use") {
+                message = "This email is already registered.";
+                }
+
+                toast.error(message);
+            })
+    }
+
     return (
         <div className="hero bg-base-100 my-10">
+
+            <ToastContainer />
+
             <div className="card bg-base-100 w-full border border-gray-300 max-w-sm shrink-0 shadow-xl pb-3">
                 <div className="card-body">
                     <h1 className="font-semibold text-center text-xl">Create an account</h1>
-                    <form className="fieldset">
+                    <form onSubmit={handleRegister} className="fieldset">
                     <label className="label">Your Name</label>
                     <input type="text" className="input" name='name' placeholder="Enter your name" required />
                     <label className="label">Photo URL</label>
-                    <input type="text" className="input" name='photo' placeholder="Enter your photo url" required />
+                    <input type="text" className="input" name='photoUrl' placeholder="Enter your photo url" required />
                     <label className="label">Email</label>
                     <input type="email" className="input" name='email' placeholder="Enter your email" required />
                     <label className="label">Password</label>
