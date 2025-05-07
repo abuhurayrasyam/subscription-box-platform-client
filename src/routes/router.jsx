@@ -10,6 +10,7 @@ import MyProfile from "../pages/MyProfile";
 import ErrorPage from "../pages/ErrorPage";
 import Loading from "../components/Loading";
 import ForgotPassword from "../pages/ForgotPassword";
+import MySubscription from "../pages/MySubscription";
 
 const router = createBrowserRouter([
     {
@@ -58,6 +59,12 @@ const router = createBrowserRouter([
             <MyProfile></MyProfile>
         </PrivateRoute>
     },
+    {
+        path: "my-subscription",
+        element: <PrivateRoute>
+            <MySubscription></MySubscription>
+        </PrivateRoute>
+    }
   ]);
 
 export default router;

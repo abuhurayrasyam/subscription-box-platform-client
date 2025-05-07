@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { GoStarFill } from 'react-icons/go';
 import 'react-toastify/dist/ReactToastify.css';
+import { SubscriptionContext } from '../provider/SubscriptionProvider';
+import { useNavigate } from 'react-router';
 
 const TechGadgetBoxPage = ({subscription}) => {
     const {thumbnail, name, techCategory, price, frequency, description, features, ratings, reviews} = subscription;
@@ -33,8 +35,20 @@ const TechGadgetBoxPage = ({subscription}) => {
         ));
     };
 
+    const { addSubscription } = useContext(SubscriptionContext)
+    const navigate = useNavigate();
+
+    const handleSubscribe = () => {
+    addSubscription(subscription);
+    toast.success("Subscribed successfully!", {autoClose: 300});
+    setTimeout(() => {
+        navigate('/my-subscription');
+    }, 500);
+    };
+
     return (
         <div className="w-11/12 mx-auto p-6">
+
         <ToastContainer />
 
         <h1 className='font-bold lg:text-4xl md:text-3xl text-2xl text-center mb-5'>Subscription Details</h1>
@@ -42,25 +56,26 @@ const TechGadgetBoxPage = ({subscription}) => {
         <div className="border border-gray-300 rounded-xl shadow-md overflow-hidden mb-6">
             <img src={thumbnail} alt="" className="w-full h-80 p-5" />
             <div className="px-8 pb-8">
-            <h2 className="text-xl font-bold mb-2">{name}</h2>
-            <p className="text-sm text-gray-600 mb-1 font-semibold">
-                Category : <span className="font-normal">{techCategory}</span>
-            </p>
-            <p className="text-lg font-semibold text-green-500">
-                {price} <span className="text-sm font-normal text-gray-500">/ {frequency}</span>
-            </p>
-            <p className="text-gray-700 my-2">{description}</p>
-            <ul className="list-disc list-inside text-gray-600 mb-2">
-                <span className="font-semibold">Features:</span>
-                {Array.isArray(features) &&
-                features.map((feature, i) => <li key={i}>{feature}</li>)}
-            </ul>
-            <div className="text-yellow-500 font-medium flex items-center gap-2">
-            <span>Rating:</span>
-            <span>{ratings}</span>
-            <span className="flex items-center">{renderStars(ratings)}</span>
-            <span className="text-sm text-gray-500">({reviews} reviews)</span>
-          </div>
+                <h2 className="text-xl font-bold mb-2">{name}</h2>
+                <p className="text-sm text-gray-600 mb-1 font-semibold">
+                    Category : <span className="font-normal">{techCategory}</span>
+                </p>
+                <p className="text-lg font-semibold text-green-500">
+                    {price} <span className="text-sm font-normal text-gray-500">/ {frequency}</span>
+                </p>
+                <p className="text-gray-700 my-2">{description}</p>
+                <ul className="list-disc list-inside text-gray-600 mb-2">
+                    <span className="font-semibold">Features:</span>
+                    {Array.isArray(features) &&
+                    features.map((feature, i) => <li key={i}>{feature}</li>)}
+                </ul>
+                <div className="text-yellow-500 font-medium flex items-center gap-2">
+                    <span>Rating:</span>
+                    <span>{ratings}</span>
+                    <span className="flex items-center">{renderStars(ratings)}</span>
+                    <span className="text-sm text-gray-500">({reviews} reviews)</span>
+                </div>
+                <button onClick={handleSubscribe} className='btn bg-gray-200 border border-gray-300 rounded-sm hover:bg-gray-300 mt-5 w-full'>Subscribe Now</button>
             </div>
         </div>
 

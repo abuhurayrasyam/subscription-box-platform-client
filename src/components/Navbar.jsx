@@ -23,6 +23,7 @@ const Navbar = () => {
     <>
       <NavLink to={"/"} className="btn btn-ghost m-2 cursor-pointer">Home</NavLink>
       <NavLink to={"/my-profile"} className="btn btn-ghost m-2 cursor-pointer">My Profile</NavLink>
+      <NavLink to={"/my-subscription"} className="btn btn-ghost m-2 cursor-pointer">My Subscription</NavLink>
     </>
   );
 
