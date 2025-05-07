@@ -34,14 +34,14 @@ const TechGadgetBoxPage = ({subscription}) => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-6">
+        <div className="w-11/12 mx-auto p-6">
         <ToastContainer />
 
         <h1 className='font-bold lg:text-4xl md:text-3xl text-2xl text-center mb-5'>Subscription Details</h1>
 
         <div className="border border-gray-300 rounded-xl shadow-md overflow-hidden mb-6">
-            <img src={thumbnail} alt="" className="w-full h-60 object-cover" />
-            <div className="p-5">
+            <img src={thumbnail} alt="" className="w-full h-80 p-5" />
+            <div className="px-8 pb-8">
             <h2 className="text-xl font-bold mb-2">{name}</h2>
             <p className="text-sm text-gray-600 mb-1 font-semibold">
                 Category : <span className="font-normal">{techCategory}</span>

@@ -16,6 +16,8 @@ const SubscriptionServiceDetails = () => {
     useEffect(() => {
         const subscriptionDetails = subscriptionsData.find(subscriptionData => subscriptionData.id == id);
         setSubscription(subscriptionDetails)
+
+        window.scrollTo(0, 0);
     },[id, subscriptionsData])
 
     useDocumentTitle(`Subscription Box | ${subscription.name}`);

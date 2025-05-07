@@ -1,81 +1,104 @@
 [
-    {
-      "id": 1,
-      "thumbnail": "https://i.ibb.co/0FfPbSv/tech-gadget-box.jpg",
-      "name": "Tech Gadget Box",
-      "techCategory": "Gadgets",
-      "price": "$29.99",
-      "frequency": "Monthly",
-      "description": "Get the latest trending tech gadgets delivered monthly to your door.",
-      "features": ["3-5 curated gadgets", "How-to guide included", "Early access to new tech"],
-      "ratings": 4.5,
-      "reviews": 120,
-      "buttonText": "View More"
-    },
-    {
-      "id": 2,
-      "thumbnail": "https://i.ibb.co/jVZBjKH/smart-home-box.jpg",
-      "name": "Smart Home Essentials",
-      "techCategory": "Smart Home",
-      "price": "$39.99",
-      "frequency": "Monthly",
-      "description": "Automate your home with smart lights, plugs, and devices.",
-      "features": ["Smart lighting", "Voice control gear", "Mobile app integration"],
-      "ratings": 4.7,
-      "reviews": 89,
-      "buttonText": "View More"
-    },
-    {
-      "id": 3,
-      "thumbnail": "https://i.ibb.co/DY0n1C5/dev-tools-box.jpg",
-      "name": "Developer Toolkit",
-      "techCategory": "Software Tools",
-      "price": "$24.99",
-      "frequency": "Monthly",
-      "description": "Essential tools, cheatsheets, and gadgets for software developers.",
-      "features": ["Dev-themed gadgets", "Stickers & swags", "Productivity boosters"],
-      "ratings": 4.2,
-      "reviews": 45,
-      "buttonText": "View More"
-    },
-    {
-      "id": 4,
-      "thumbnail": "https://i.ibb.co/3kCjKxS/gaming-box.jpg",
-      "name": "Gaming Loot Crate",
-      "techCategory": "Gaming",
-      "price": "$34.99",
-      "frequency": "Bi-Monthly",
-      "description": "Exclusive gaming merch, collectibles, and digital goodies.",
-      "features": ["Game-themed items", "Shirts, figures, and codes", "Fan favorite picks"],
-      "ratings": 4.8,
-      "reviews": 230,
-      "buttonText": "View More"
-    },
-    {
-      "id": 5,
-      "thumbnail": "https://i.ibb.co/MhHdG74/mobile-accessories.jpg",
-      "name": "Mobile Accessories Pack",
-      "techCategory": "Mobile",
-      "price": "$19.99",
-      "frequency": "Monthly",
-      "description": "Must-have mobile gear: cables, grips, cases, and more.",
-      "features": ["Premium accessories", "Cross-brand support", "Trendy designs"],
-      "ratings": 4.1,
-      "reviews": 60,
-      "buttonText": "View More"
-    },
-    {
-      "id": 6,
-      "thumbnail": "https://i.ibb.co/4MnGHDj/vr-starter-box.jpg",
-      "name": "VR Starter Pack",
-      "techCategory": "Virtual Reality",
-      "price": "$49.99",
-      "frequency": "Quarterly",
-      "description": "Dive into the world of VR with curated content and gear.",
-      "features": ["Intro VR games", "Comfort accessories", "Setup guides"],
-      "ratings": 4.6,
-      "reviews": 75,
-      "buttonText": "View More"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg",
+    "name": "YouTube Memberships",
+    "techCategory": "Video Platform",
+    "price": "Starting at $4.99",
+    "frequency": "Monthly",
+    "description": "Offer exclusive perks to channel members like badges, emojis, and members-only content.",
+    "features": [
+      "Custom loyalty badges",
+      "Members-only videos & streams",
+      "Community tab posts"
+    ],
+    "ratings": 4.8,
+    "reviews": 15000,
+    "buttonText": "View More"
+  },
+  {
+    "id": 2,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
+    "name": "Spotify Podcast Subscriptions",
+    "techCategory": "Audio Streaming",
+    "price": "Creator-set (avg. $2.99–$7.99)",
+    "frequency": "Monthly",
+    "description": "Monetize podcasts with exclusive paid subscriber content through Spotify.",
+    "features": [
+      "Exclusive episodes",
+      "Flexible pricing",
+      "No cut for creators (first 2 years)"
+    ],
+    "ratings": 4.7,
+    "reviews": 11200,
+    "buttonText": "View More"
+  },
+  {
+    "id": 3,
+    "thumbnail": "https://www.sketchappsources.com/resources/source-image/apple_podcasts.png",
+    "name": "Apple Podcasts Subscriptions",
+    "techCategory": "Podcasting",
+    "price": "Creator-set (avg. $1.99–$9.99)",
+    "frequency": "Monthly",
+    "description": "Offer premium podcast experiences with early access and ad-free listening.",
+    "features": [
+      "Ad-free listening",
+      "Bonus content",
+      "Early access"
+    ],
+    "ratings": 4.6,
+    "reviews": 8900,
+    "buttonText": "View More"
+  },
+  {
+    "id": 4,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png",
+    "name": "Amazon Prime Video Channels",
+    "techCategory": "Media Streaming",
+    "price": "Varies by channel (avg. $4.99–$14.99)",
+    "frequency": "Monthly",
+    "description": "Add-on subscriptions for premium streaming content through Amazon Prime Video.",
+    "features": [
+      "No cable required",
+      "Single unified billing",
+      "Premium add-ons like HBO, Starz, Showtime"
+    ],
+    "ratings": 4.5,
+    "reviews": 10000,
+    "buttonText": "View More"
+  },
+  {
+    "id": 5,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Vimeo_Logo.svg",
+    "name": "Vimeo OTT",
+    "techCategory": "Streaming Video",
+    "price": "Starts at $1",
+    "frequency": "Monthly",
+    "description": "Launch your own Netflix-style subscription video service.",
+    "features": [
+      "Branded OTT apps",
+      "Subscriber analytics",
+      "Custom pricing plans"
+    ],
+    "ratings": 4.3,
+    "reviews": 2100,
+    "buttonText": "View More"
+  },
+  {
+    "id": 6,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    "name": "Microsoft 365",
+    "techCategory": "Productivity Suite",
+    "price": "Starting at $6.99",
+    "frequency": "Monthly",
+    "description": "Access premium Office apps, cloud storage, and advanced security with a Microsoft 365 subscription.",
+    "features": [
+      "Word, Excel, PowerPoint, Outlook",
+      "1TB OneDrive cloud storage",
+      "Advanced security & collaboration tools"
+    ],
+    "ratings": 4.6,
+    "reviews": 25000,
+    "buttonText": "View More"
+  }
+]
