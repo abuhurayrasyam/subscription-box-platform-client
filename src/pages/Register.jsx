@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Register = () => {
 
@@ -65,6 +66,8 @@ const Register = () => {
                 toast.error(message);
             })
     }
+
+    useDocumentTitle("Subscription Box | Register");
 
     return (
         <div className="hero bg-base-100 my-10">

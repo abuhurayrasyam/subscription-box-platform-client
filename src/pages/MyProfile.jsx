@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast, ToastContainer } from "react-toastify";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const MyProfile = () => {
     const { user, updateUser, setUser } = useContext(AuthContext);
@@ -22,6 +23,8 @@ const MyProfile = () => {
             toast.error("Failed to update profile!");
         });
     }
+
+    useDocumentTitle("Subscription Box | MyProfile");
 
     return (
         <div>

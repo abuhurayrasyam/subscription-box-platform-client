@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Login = () => {
 
@@ -33,6 +34,8 @@ const Login = () => {
                 }
             });
     }
+
+    useDocumentTitle("Subscription Box | Login");
 
     return (
         <div className="hero bg-base-100 my-10">

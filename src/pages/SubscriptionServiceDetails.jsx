@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router';
 import Navbar from '../components/Navbar';
 import SubscriptionServiceDetailsCard from '../components/SubscriptionServiceDetailsCard';
 import Footer from '../components/Footer';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const SubscriptionServiceDetails = () => {
 
@@ -16,6 +17,8 @@ const SubscriptionServiceDetails = () => {
         const subscriptionDetails = subscriptionsData.find(subscriptionData => subscriptionData.id == id);
         setSubscription(subscriptionDetails)
     },[id, subscriptionsData])
+
+    useDocumentTitle(`Subscription Box | ${subscription.name}`);
     
     return (
         <div>
