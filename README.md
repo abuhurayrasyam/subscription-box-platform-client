@@ -1,12 +1,52 @@
-# React + Vite
+# 📦 Subscription Box Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive single-page application (SPA) that allows users to browse, subscribe to, and manage monthly subscription boxes tailored to their interests. Built with React and Firebase, the platform delivers a personalized experience where users can explore various categories, view details, leave reviews, and manage their profile and subscriptions.
 
-Currently, two official plugins are available:
+🔗 **Live Site**: [https://subscription-box-platform.web.app/](https://subscription-box-platform.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🎯 Project Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The goal of this project is to create a curated subscription box service platform. Each box is designed to match the user's preferences and provides something new and exciting every month. The application includes secure authentication, interactive UI components, and user profile management.
+
+---
+
+## 🚀 Key Features
+
+- 🔐 **Authentication** with Email/Password & Google using Firebase
+- 🔄 **Persistent Login** via Firebase `onAuthStateChanged`
+- 👥 **Profile Management** (view & update name and photo using `updateProfile`)
+- 🔐 **Protected Routes** (redirects to login if not authenticated)
+- 📝 **Review System** on service details
+- 🔎 **Dynamic Routing** with detailed service pages
+- 🖼️ **Image Sliders** using SwiperJS
+- 📃 **404 Page** for invalid routes
+- ✅ **Form Validation** with toast notifications
+- 🕶️ **Show/Hide Password** toggle in forms
+- 💌 **Forgot Password** functionality
+- 🧭 **Dynamic Titles** on each route
+- 🎨 **Fully Responsive Design** (mobile, tablet, desktop)
+- 🗂️ **Extra Private Route** for additional functionality
+
+---
+
+## 🧰 Tech Stack & Packages Used
+
+- **React** – Frontend framework
+- **Firebase** – Authentication and hosting
+- **Vite** – Fast build tool
+- **TailwindCSS** – Utility-first CSS
+- **DaisyUI** – Pre-styled UI components
+- **React Router DOM** – Routing
+- **React Icons** – Icon library
+- **React Toastify** – Toast notifications
+- **SwiperJS** – Sliders and carousels
+
+---
+
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+📬 Contact
+For questions or feedback, reach out via email: abuhurayrasyamofficial@gmail.com
