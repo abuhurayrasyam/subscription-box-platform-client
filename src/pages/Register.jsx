@@ -8,7 +8,7 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Register = () => {
 
-    const {createUser, updateUser} = useContext(AuthContext);
+    const {createUser, updateUser, handleGoogleSignIn} = useContext(AuthContext);
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -105,7 +105,7 @@ const Register = () => {
                         <h4 className="text-gray-600 text-sm">Or</h4>
                         <div className="flex-1 border-t border-gray-400"></div>
                     </div>
-                    <button className="btn btn-outline mt-1">
+                    <button onClick={handleGoogleSignIn} className="btn btn-outline mt-1">
                     <FcGoogle className="text-xl" />
                     Continue with Google
                     </button>
