@@ -15,7 +15,7 @@ const Navbar = () => {
         toast.success("Logout Successful", {autoClose: 500})
       })
       .catch(() => {
-        toast.error("Logout Unsuccessful", {autoClose: 500})
+        toast.error("Logout Unsuccessful")
       });
   }
 

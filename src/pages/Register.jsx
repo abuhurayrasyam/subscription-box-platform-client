@@ -53,8 +53,8 @@ const Register = () => {
                             navigate(`${location.state ? location.state : "/"}`)
                         }, 500);
                     })
-                    .catch((error) => {
-                        alert(error);
+                    .catch(() => {
+                        toast.error("Failed to create account. Please try again.");
                     });
              })
             .catch((error) => {
@@ -66,7 +66,7 @@ const Register = () => {
                 message = "This email is already registered.";
                 }
 
-                toast.error(message, {autoClose: 500});
+                toast.error(message);
             })
     }
 
@@ -79,6 +79,7 @@ const Register = () => {
             }, 500);
         })
         .catch(() => {
+            toast.error("Google sign-in failed. Please try again or use another account.");
         });
     }
 

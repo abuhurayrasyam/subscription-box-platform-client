@@ -34,7 +34,7 @@ const Login = () => {
                 const errorCode = error.code;
                 
                 if (errorCode === "auth/invalid-credential") {
-                    toast.error("Incorrect email or password. Please try again.", {autoClose: 500});
+                    toast.error("Incorrect email or password. Please try again.");
                 }
             });
     }
@@ -48,6 +48,7 @@ const Login = () => {
             }, 500); 
         })
         .catch(() => {
+            toast.error("Google sign-in failed. Please try again or use another account.");
         });
     }
 
