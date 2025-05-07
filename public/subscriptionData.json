@@ -1,23 +1,6 @@
 [
   {
     "id": 1,
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg",
-    "name": "YouTube Memberships",
-    "techCategory": "Video Platform",
-    "price": "Starting at $4.99",
-    "frequency": "Monthly",
-    "description": "Offer exclusive perks to channel members like badges, emojis, and members-only content.",
-    "features": [
-      "Custom loyalty badges",
-      "Members-only videos & streams",
-      "Community tab posts"
-    ],
-    "ratings": 4.8,
-    "reviews": 15000,
-    "buttonText": "View More"
-  },
-  {
-    "id": 2,
     "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
     "name": "Spotify Podcast Subscriptions",
     "techCategory": "Audio Streaming",
@@ -34,7 +17,7 @@
     "buttonText": "View More"
   },
   {
-    "id": 3,
+    "id": 2,
     "thumbnail": "https://www.sketchappsources.com/resources/source-image/apple_podcasts.png",
     "name": "Apple Podcasts Subscriptions",
     "techCategory": "Podcasting",
@@ -51,7 +34,7 @@
     "buttonText": "View More"
   },
   {
-    "id": 4,
+    "id": 3,
     "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png",
     "name": "Amazon Prime Video Channels",
     "techCategory": "Media Streaming",
@@ -68,7 +51,7 @@
     "buttonText": "View More"
   },
   {
-    "id": 5,
+    "id": 4,
     "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Vimeo_Logo.svg",
     "name": "Vimeo OTT",
     "techCategory": "Streaming Video",
@@ -82,6 +65,23 @@
     ],
     "ratings": 4.3,
     "reviews": 2100,
+    "buttonText": "View More"
+  },
+  {
+    "id": 5,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg",
+    "name": "YouTube Memberships",
+    "techCategory": "Video Platform",
+    "price": "Starting at $4.99",
+    "frequency": "Monthly",
+    "description": "Offer exclusive perks to channel members like badges, emojis, and members-only content.",
+    "features": [
+      "Custom loyalty badges",
+      "Members-only videos & streams",
+      "Community tab posts"
+    ],
+    "ratings": 4.8,
+    "reviews": 15000,
     "buttonText": "View More"
   },
   {
