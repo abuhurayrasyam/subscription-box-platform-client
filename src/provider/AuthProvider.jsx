@@ -22,18 +22,12 @@ const AuthProvider = ({children}) => {
     }
 
     const updateUser = (updatedData) => {
-        return updateProfile(auth.currentUser, updatedData)
+        return updateProfile(auth.currentUser, updatedData);
     }
 
     const provider = new GoogleAuthProvider();
-    const handleGoogleSignIn = () => {
-        signInWithPopup(auth, provider)
-        .then((result) => {
-            console.log(result)
-        })
-        .catch((error) => {
-            console.log(error)
-        });
+    const signInViaGoogle = () => {
+        return signInWithPopup(auth, provider);
     }
 
     const authData =  {
@@ -44,7 +38,7 @@ const AuthProvider = ({children}) => {
         logoutUser,
         loading,
         updateUser,
-        handleGoogleSignIn
+        signInViaGoogle
     }
 
     useEffect(() => {

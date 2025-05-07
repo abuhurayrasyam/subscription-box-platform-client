@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
@@ -8,10 +8,11 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Register = () => {
 
-    const {createUser, updateUser, handleGoogleSignIn} = useContext(AuthContext);
+    const {createUser, updateUser, signInViaGoogle} = useContext(AuthContext);
 
     const [showPassword, setShowPassword] = useState(false);
 
+    const location = useLocation();
     const navigate = useNavigate();
 
     const handleRegister = (e) => {
@@ -47,8 +48,10 @@ const Register = () => {
             .then(() => {
                 updateUser({ displayName: name, photoURL: photoUrl })
                     .then(() => {
-                        toast.success("Account created successfully!");
-                        navigate("/");
+                        toast.success("Account created successfully!", {autoClose: 300});
+                        setTimeout(() => {
+                            navigate(`${location.state ? location.state : "/"}`)
+                        }, 500);
                     })
                     .catch((error) => {
                         alert(error);
@@ -63,8 +66,20 @@ const Register = () => {
                 message = "This email is already registered.";
                 }
 
-                toast.error(message);
+                toast.error(message, {autoClose: 500});
             })
+    }
+
+    const handleGoogleSignIn = () => {
+        signInViaGoogle()
+        .then(() => {
+            toast.success("SignIn successfully!", {autoClose: 300});
+            setTimeout(() => {
+                navigate(`${location.state ? location.state : "/"}`)
+            }, 500);
+        })
+        .catch(() => {
+        });
     }
 
     useDocumentTitle("Subscription Box | Register");
@@ -74,7 +89,7 @@ const Register = () => {
 
             <ToastContainer />
 
-            <div className="card bg-base-100 w-full border border-gray-300 max-w-sm shrink-0 shadow-xl pb-3">
+            <div className="card bg-base-100 w-full border border-gray-300 max-w-sm shrink-0 shadow-sm pb-3">
                 <div className="card-body">
                     <h1 className="font-semibold text-center text-xl">Create an account</h1>
                     <form onSubmit={handleRegister} className="fieldset">

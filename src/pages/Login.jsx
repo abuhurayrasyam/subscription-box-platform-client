@@ -8,7 +8,7 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Login = () => {
 
-    const {loginUser, handleGoogleSignIn} = useContext(AuthContext);
+    const {loginUser, signInViaGoogle} = useContext(AuthContext);
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -23,16 +23,30 @@ const Login = () => {
         
         loginUser(email, password)
             .then(() => {
-                toast.success("Logged in successfully!");
+                toast.success("Logged in successfully!", {autoClose: 300});
+                setTimeout(() => {
                 navigate(`${location.state ? location.state : "/"}`)
+            }, 500); 
             })
             .catch((error) => {
                 const errorCode = error.code;
                 
                 if (errorCode === "auth/invalid-credential") {
-                    toast.error("Incorrect email or password. Please try again.");
+                    toast.error("Incorrect email or password. Please try again.", {autoClose: 500});
                 }
             });
+    }
+
+    const handleGoogleSignIn = () => {
+        signInViaGoogle()
+        .then(() => {
+            toast.success("SignIn successfully!", {autoClose: 300});
+            setTimeout(() => {
+                navigate(`${location.state ? location.state : "/"}`)
+            }, 500); 
+        })
+        .catch(() => {
+        });
     }
 
     useDocumentTitle("Subscription Box | Login");
@@ -42,7 +56,7 @@ const Login = () => {
 
             <ToastContainer />
 
-            <div className="card bg-base-100 border border-gray-300 w-full max-w-sm shrink-0 shadow-xl pb-3">
+            <div className="card bg-base-100 border border-gray-300 w-full max-w-sm shrink-0 shadow-sm pb-3">
                 <div className="card-body">
                     <h1 className="font-semibold text-center text-xl">Login Your Account</h1>
                     <form onSubmit={handleLogin} className="fieldset">
