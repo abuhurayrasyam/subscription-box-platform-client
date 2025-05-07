@@ -12,6 +12,8 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
+    const [email, setEmail] = useState('');
+
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -26,7 +28,7 @@ const Login = () => {
                 toast.success("Logged in successfully!", {autoClose: 300});
                 setTimeout(() => {
                 navigate(`${location.state ? location.state : "/"}`)
-            }, 500); 
+                }, 500); 
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -61,7 +63,7 @@ const Login = () => {
                     <h1 className="font-semibold text-center text-xl">Login Your Account</h1>
                     <form onSubmit={handleLogin} className="fieldset">
                     <label className="label">Email</label>
-                    <input type="email" className="input" name="email" placeholder="Enter your email" required />
+                    <input type="email" className="input" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" required />
                     <label className="label">Password</label>
                     <div className='relative'>
                         <input type={showPassword ? "text" : "password"} className="input" name="password" placeholder="Enter your password" required />
@@ -72,7 +74,7 @@ const Login = () => {
                         </button>
                     </div>
                     <div>
-                        <a className="link link-hover">Forgot password?</a>
+                        <Link to={'/auth/forgot-password'} state={{ email }} className="link link-hover">Forgot password?</Link>
                     </div>
                     <button className="btn btn-neutral mt-4">Login</button>
                     </form>

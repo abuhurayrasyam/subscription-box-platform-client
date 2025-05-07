@@ -9,6 +9,7 @@ import SubscriptionServiceDetails from "../pages/SubscriptionServiceDetails";
 import MyProfile from "../pages/MyProfile";
 import ErrorPage from "../pages/ErrorPage";
 import Loading from "../components/Loading";
+import ForgotPassword from "../pages/ForgotPassword";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         {
             path: "/auth/login",
             Component: Login
+        },
+        {
+            path: "/auth/forgot-password",
+            Component: ForgotPassword
         }
         ]
     },
