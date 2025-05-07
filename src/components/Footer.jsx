@@ -28,7 +28,7 @@ const Footer = () => {
             </nav>
         </div>
         <div className="bg-base-300 py-4">
-            <p className="text-center w-11/12 mx-auto text-sm">Copyright © {new Date().getFullYear()} - All right reserved by Subscription Box Platform</p>
+            <p className="text-center w-11/12 mx-auto md:text-sm text-[12px]">Copyright © {new Date().getFullYear()} - All right reserved by Subscription Box Platform</p>
         </div>
     </footer>
   );

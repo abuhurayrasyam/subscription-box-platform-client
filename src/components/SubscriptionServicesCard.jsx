@@ -5,7 +5,7 @@ const SubscriptionServicesCard = ({ subscriptionData }) => {
   const { id, thumbnail, name, techCategory, price, frequency } = subscriptionData;
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 w-90 transition-transform hover:scale-[1.02] duration-200">
+    <div className="w-11/12 mx-auto bg-white rounded-2xl shadow-lg border border-gray-200 transition-transform hover:scale-[1.02] duration-200">
       <img src={thumbnail}  alt={name} className="w-full h-48 object-cover rounded-t-2xl"
       />
       <div className="p-5">

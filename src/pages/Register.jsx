@@ -1,12 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
+import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
 
 const Register = () => {
 
     const {createUser, updateUser} = useContext(AuthContext);
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const navigate = useNavigate();
 
@@ -79,7 +82,14 @@ const Register = () => {
                     <label className="label">Email</label>
                     <input type="email" className="input" name='email' placeholder="Enter your email" required />
                     <label className="label">Password</label>
-                    <input type="password" className="input" name='password' placeholder="Enter your password" required />
+                    <div className='relative'>
+                        <input type={showPassword ? "text" : "password"} className="input" name='password' placeholder="Enter your password" required />
+                        <button onClick={() => {setShowPassword(!showPassword)}} className='absolute top-3 right-7 cursor-pointer'>
+                            {
+                                showPassword ? <IoEyeOutline size={15} /> : <IoEyeOffOutline size={15} />
+                            }
+                        </button>
+                    </div>
                     <div className='flex items-center gap-1 mt-2'>
                         <input type="checkbox" defaultChecked className="checkbox h-5 w-5" />
                         <a className="link link-hover">Accept Term & Conditions</a>
