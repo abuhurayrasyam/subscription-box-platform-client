@@ -3,6 +3,8 @@ import Slider from '../components/Slider';
 import SubscriptionServices from '../components/SubscriptionServices';
 import { useLoaderData } from 'react-router';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import Testimonials from '../components/Testimonials';
+import HowItWorks from '../components/HowItWorks';
 
 const Home = () => {
 
@@ -25,6 +27,12 @@ const Home = () => {
             </section>
             <section className='w-11/12 mx-auto'>
                 <SubscriptionServices subscriptionsData={subscriptionsData}></SubscriptionServices>
+            </section>
+            <section>
+                <HowItWorks></HowItWorks>
+            </section>
+            <section>
+                <Testimonials></Testimonials>
             </section>
         </div>
     );
