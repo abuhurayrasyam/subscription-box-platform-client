@@ -45,6 +45,28 @@ The goal of this project is to create a curated subscription box service platfor
 
 ---
 
+## 📦 Environment Variables
+
+Create a `.env.local` file in the root of the client project and add:
+
+```env
+VITE_FIREBASE_API_KEY=your-api-key
+VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
+VITE_FIREBASE_PROJECT_ID=your-project-id
+VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-id
+VITE_FIREBASE_APP_ID=your-app-id
+```
+
+
+## 📜 Installation
+```
+npm install
+npm run dev
+```
+
+---
+
 📄 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
